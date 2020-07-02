@@ -77,7 +77,7 @@
             this.bookLabel.Name = "bookLabel";
             this.bookLabel.Size = new System.Drawing.Size(163, 30);
             this.bookLabel.TabIndex = 4;
-            this.bookLabel.Text = "Комплектующее:";
+            this.bookLabel.Text = "Book:";
             this.bookLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // countLabel
@@ -87,7 +87,7 @@
             this.countLabel.Name = "countLabel";
             this.countLabel.Size = new System.Drawing.Size(163, 30);
             this.countLabel.TabIndex = 6;
-            this.countLabel.Text = "Количество:";
+            this.countLabel.Text = "Count:";
             this.countLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // countPanel

@@ -177,7 +177,7 @@
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(163, 30);
             this.emailLabel.TabIndex = 8;
-            this.emailLabel.Text = "Street:";
+            this.emailLabel.Text = "Email:";
             this.emailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // emailPanel

@@ -31,6 +31,7 @@ namespace BookStoreView
                 {
                     booksGridView.DataSource = booksList;
                     booksGridView.Columns[0].Visible = false;
+                    booksGridView.Columns[4].Visible = false;
                     booksGridView.AutoResizeColumns();
                 }
             }

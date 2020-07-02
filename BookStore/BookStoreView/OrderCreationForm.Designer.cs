@@ -32,10 +32,6 @@
             this.customerLabel = new System.Windows.Forms.Label();
             this.customerComboBox = new System.Windows.Forms.ComboBox();
             this.booksGridView = new System.Windows.Forms.DataGridView();
-            this.componentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookTitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookAuthorColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bookCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.booksLabel = new System.Windows.Forms.Label();
             this.addBookButton = new System.Windows.Forms.Button();
             this.updateBookButton = new System.Windows.Forms.Button();
@@ -43,6 +39,9 @@
             this.refreshBooksButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
             this.saveButton = new System.Windows.Forms.Button();
+            this.componentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookTitleColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bookCountColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.booksGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +74,6 @@
             this.booksGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.componentID,
             this.bookTitleColumn,
-            this.bookAuthorColumn,
             this.bookCountColumn});
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
@@ -91,35 +89,6 @@
             this.booksGridView.ReadOnly = true;
             this.booksGridView.Size = new System.Drawing.Size(670, 250);
             this.booksGridView.TabIndex = 10;
-            // 
-            // componentID
-            // 
-            this.componentID.HeaderText = "ID";
-            this.componentID.Name = "componentID";
-            this.componentID.ReadOnly = true;
-            this.componentID.Visible = false;
-            // 
-            // bookTitleColumn
-            // 
-            this.bookTitleColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bookTitleColumn.FillWeight = 80F;
-            this.bookTitleColumn.HeaderText = "Title";
-            this.bookTitleColumn.Name = "bookTitleColumn";
-            this.bookTitleColumn.ReadOnly = true;
-            // 
-            // bookAuthorColumn
-            // 
-            this.bookAuthorColumn.HeaderText = "Author";
-            this.bookAuthorColumn.Name = "bookAuthorColumn";
-            this.bookAuthorColumn.ReadOnly = true;
-            // 
-            // bookCountColumn
-            // 
-            this.bookCountColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.bookCountColumn.FillWeight = 20F;
-            this.bookCountColumn.HeaderText = "Count";
-            this.bookCountColumn.Name = "bookCountColumn";
-            this.bookCountColumn.ReadOnly = true;
             // 
             // booksLabel
             // 
@@ -227,6 +196,29 @@
             this.saveButton.UseVisualStyleBackColor = false;
             this.saveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // componentID
+            // 
+            this.componentID.HeaderText = "ID";
+            this.componentID.Name = "componentID";
+            this.componentID.ReadOnly = true;
+            this.componentID.Visible = false;
+            // 
+            // bookTitleColumn
+            // 
+            this.bookTitleColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bookTitleColumn.FillWeight = 80F;
+            this.bookTitleColumn.HeaderText = "Title";
+            this.bookTitleColumn.Name = "bookTitleColumn";
+            this.bookTitleColumn.ReadOnly = true;
+            // 
+            // bookCountColumn
+            // 
+            this.bookCountColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.bookCountColumn.FillWeight = 20F;
+            this.bookCountColumn.HeaderText = "Count";
+            this.bookCountColumn.Name = "bookCountColumn";
+            this.bookCountColumn.ReadOnly = true;
+            // 
             // OrderCreationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
@@ -269,7 +261,6 @@
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.DataGridViewTextBoxColumn componentID;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookTitleColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bookAuthorColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn bookCountColumn;
     }
 }

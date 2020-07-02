@@ -28,23 +28,6 @@ namespace BookStoreDBImplementation.Implementations
                             {
                                 throw new Exception("Order not found");
                             }
-                            else if (model.Status == OrderStatus.Created)
-                            {
-                                var orderBooks = context.OrderBooks
-                                    .Where(rec => rec.OrderID == model.ID.Value).ToList();
-                                context.OrderBooks.RemoveRange(orderBooks.Where(rec =>
-                                    !model.Books.ContainsKey(rec.BookID)).ToList());
-                                foreach (var updBook in orderBooks)
-                                {
-                                    updBook.Count = model.Books[updBook.BookID].Item2;
-                                    model.Books.Remove(updBook.BookID);
-                                }
-                                context.SaveChanges();
-                            }
-                            else
-                            {
-                                throw new Exception("Unable to edit order");
-                            }
                         }
                         else
                         {
@@ -55,15 +38,18 @@ namespace BookStoreDBImplementation.Implementations
                         order.PlacementDate = model.PlacementDate;
                         order.Status = model.Status;
                         context.SaveChanges();
-                        foreach (var book in model.Books)
+                        if (!model.ID.HasValue)
                         {
-                            context.OrderBooks.Add(new OrderBook
+                            foreach (var book in model.Books)
                             {
-                                OrderID = order.ID,
-                                BookID = book.Key,
-                                Count = book.Value.Item2
-                            });
-                            context.SaveChanges();
+                                context.OrderBooks.Add(new OrderBook
+                                {
+                                    OrderID = order.ID,
+                                    BookID = book.Key,
+                                    Count = book.Value.Item2
+                                });
+                                context.SaveChanges();
+                            }
                         }
                         transaction.Commit();
                     }

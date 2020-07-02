@@ -2,12 +2,10 @@
 using BookStoreBusinessLogic.BusinessLogic;
 using BookStoreBusinessLogic.ViewModels;
 using BookStoreBusinessLogic.Interfaces;
-using BookStoreBusinessLogic.Enums;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using Unity;
-using BookStoreDBImplementation.Models;
 
 namespace BookStoreView
 {
@@ -34,6 +32,7 @@ namespace BookStoreView
                     ordersGridView.DataSource = ordersList;
                     ordersGridView.Columns[0].Visible = false;
                     ordersGridView.Columns[1].Visible = false;
+                    ordersGridView.Columns[5].Visible = false;
                     ordersGridView.AutoResizeColumns();
                 }
             }
