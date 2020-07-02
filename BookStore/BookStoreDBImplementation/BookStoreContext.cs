@@ -9,7 +9,7 @@ namespace BookStoreDBImplementation
         {
             if (optionsBuilder.IsConfigured == false)
             {
-                optionsBuilder.UseSqlServer(@"Data Source=DESKTOP-82A8HG1\SQLEXPRESS;
+                optionsBuilder.UseSqlServer(@"Data Source=HOME-PC\SQLEXPRESS;
                 Initial Catalog=BookStoreDatabase;Integrated Security=True;
                 MultipleActiveResultSets=True;");
             }
