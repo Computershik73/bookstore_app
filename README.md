@@ -1,2 +1,2 @@
-# DBMS_user_application
+# Book Store
 Book Store App
